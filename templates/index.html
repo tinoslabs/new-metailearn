@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metailearn</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/Metalogo.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/Metalogo.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/Metalogo.png' %}" />
+    <link rel="manifest" href="{% static 'assets/images/Metalogo.png' %}" />
+    <meta name="description" content="Meatile" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-ui/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jarallax/jarallax.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/tiny-slider/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/eduhive-icons/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.theme.default.min.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/eduhive.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/eduhive-dark.css' %}" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(static/assets/images/loader.png);"></div>
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header main-header--two main-header--three sticky-header sticky-header--three sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__left">
+                        <div class="main-header__logo logo-retina">
+                            <a href="{% url 'index' %}">
+                               <nav style="width: 160px;"> <img src="{% static 'assets/images/Metailearn_white.png' %}" alt="eduhive HTML" width="209"></nav>
+                            </a>
+                        </div><!-- /.main-header__logo -->
+                        
+                    </div><!-- /.main-header__left -->
+                    <div class="main-header__right">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+
+                                <li >
+                                    <a href="{% url 'index' %}">Home</a>
+                                    
+                                </li>
+
+
+                                <li>
+                                    <a href="{% url 'about' %}">About</a>
+                                </li>
+                                <li >
+                                    <a href="{% url 'services' %}">Services</a>
+
+                                </li>
+                                
+                                <li>
+                                    <a href="{% url 'instructors' %}">instructors</a>         
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'courses' %}">courses</a>         
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}">Blog</a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.main-header__nav -->
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- /.mobile-nav__toggler -->
+                        
+                        
+                        <a href="{% url 'contact' %}" class="main-header__btn eduhive-btn">
+                            <span>Get In Touch</span>
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                            </span>
+                        </a><!-- /.main-header__btn eduhive-btn -->
+                    </div><!-- /.main-header__right -->
+                </div><!-- /.main-header__inner -->
+            </div><!-- /.container-fluid -->
+        </header><!-- /.main-header -->
+
+
+        <section class="main-slider-three" id="home">
+            <div class="main-slider-three__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+        "items": 1,
+        "margin": 0,
+        "animateIn": "fadeIn",
+        "animateOut": "fadeOut",
+        "loop": true,
+        "smartSpeed": 1000,
+        "nav": false,
+        "dots": false,
+        "autoplay": true,
+        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
+    }'>
+                <div class="main-slider-three__item">
+                    <div class="main-slider-three__bg" style="background-image: url(static/assets/images/shapes/main-slider-bg-2-1.png);"></div><!-- /.main-slider-three__bg -->
+                    <div class="container">
+                        <div class="row gutter-y-60 align-items-center">
+                            <div class="col-lg-12">
+                                <div class="main-slider-three__content">
+                                    {% comment %} <div class="main-slider-three__video">
+                                        <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-three__video__btn video-btn video-popup">
+                                            <i class="icon-play"></i>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                    </div> {% endcomment %}
+                                    <h2 class="main-slider-three__title">
+                                        <span class="main-slider-three__title__inner">
+                                            <span class="main-slider-three__title__text main-slider-three__title__text--1">Learn <span class="main-slider-three__title__highlight">new skills.</span> Prove</span>
+                                        </span><!-- /.main-slider-three__title__inner -->
+                                        <span class="main-slider-three__title__inner">
+                                            <span class="main-slider-three__title__text main-slider-three__title__text--2">your potential.</span>
+                                        </span><!-- /.main-slider-three__title__inner -->
+                                    </h2><!-- /.title -->
+                                    <div class="main-slider-three__bottom">
+                                        <div class="main-slider-three__bottom__inner">
+                                            <a href="{% url 'courses' %}" class="main-slider-three__btn eduhive-btn">
+                                                <span class="eduhive-btn__text">find course</span>
+                                                <span class="eduhive-btn__icon">
+                                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                                </span>
+                                            </a><!-- /.eduhive-btn -->
+                                        </div><!-- /.main-slider-three__bottom__inner -->
+                                        
+                                    </div><!-- /.button -->
+                                    <div class="main-slider-three__content__circle-one main-slider-three__circle"></div><!-- /.circle-one -->
+                                    <div class="main-slider-three__content__circle-two main-slider-three__circle"></div><!-- /.circle-two -->
+                                </div><!-- /.main-slider-three__content -->
+                                <div class="main-slider-three__images">
+                                    <div class="main-slider-three__image main-slider-three__image--top">
+                                        <img src="{% static 'assets/images/main-slider-3-1.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image">
+                                        <img src="{% static 'assets/images/main-slider-3-2.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image">
+                                        <img src="{% static 'assets/images/main-slider-3-3.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image main-slider-three__image--top">
+                                        <img src="{% static 'assets/images/main-slider-3-4.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                </div><!-- /.main-slider-three__images -->
+                            </div><!-- /.col-lg-12 -->
+                        </div><!-- /.row gutter-y-60 -->
+                    </div><!-- /.container -->
+                    <img src="{% static 'assets/images/shapes/main-slider-shape-3-1.png' %}" alt="shape" class="main-slider-three__shape-one slider-image">
+                    <img src="{% static 'assets/images/shapes/main-slider-shape-3-2.png' %}" alt="shape" class="main-slider-three__shape-two slider-image">
+                    <div class="main-slider-three__box-one"></div><!-- /.box-one -->
+                    <div class="main-slider-three__box-two"></div><!-- /.box-two -->
+                    <div class="main-slider-three__circle-one main-slider-three__circle"></div><!-- /.circle-one -->
+                    <div class="main-slider-three__circle-two main-slider-three__circle"></div><!-- /.circle-two -->
+                    <div class="main-slider-three__circle-three main-slider-three__circle"></div><!-- /.circle-three -->
+                    <div class="main-slider-three__circle-four main-slider-three__circle"></div><!-- /.circle-four -->
+                </div><!-- /.main-slider-three__item -->
+                <div class="main-slider-three__item">
+                    <div class="main-slider-three__bg" style="background-image: url(static/assets/images/shapes/main-slider-bg-2-1.png);"></div><!-- /.main-slider-three__bg -->
+                    <div class="container">
+                        <div class="row gutter-y-60 align-items-center">
+                            <div class="col-lg-12">
+                                <div class="main-slider-three__content">
+                                    {% comment %} <div class="main-slider-three__video">
+                                        <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-three__video__btn video-btn video-popup">
+                                            <i class="icon-play"></i>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                    </div> {% endcomment %}
+                                    <h2 class="main-slider-three__title">
+                                        <span class="main-slider-three__title__inner">
+                                            <span class="main-slider-three__title__text main-slider-three__title__text--1">Learn New Skills To Go</span>
+                                        </span><!-- /.main-slider-three__title__inner -->
+                                        <span class="main-slider-three__title__inner">
+                                            <span class="main-slider-three__title__text main-slider-three__title__text--2">Ahead For Your<span class="main-slider-three__title__highlight">Career</span></span>
+                                        </span><!-- /.main-slider-three__title__inner -->
+                                    </h2><!-- /.title -->
+                                    <div class="main-slider-three__bottom">
+                                        <div class="main-slider-three__bottom__inner">
+                                            <a href="{% url 'courses' %}" class="main-slider-three__btn eduhive-btn">
+                                                <span class="eduhive-btn__text">find course</span>
+                                                <span class="eduhive-btn__icon">
+                                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                                </span>
+                                            </a><!-- /.eduhive-btn -->
+                                        </div><!-- /.main-slider-three__bottom__inner -->
+                                        
+                                    </div><!-- /.button -->
+                                    <div class="main-slider-three__content__circle-one main-slider-three__circle"></div><!-- /.circle-one -->
+                                    <div class="main-slider-three__content__circle-two main-slider-three__circle"></div><!-- /.circle-two -->
+                                </div><!-- /.main-slider-three__content -->
+                                <div class="main-slider-three__images">
+                                    <div class="main-slider-three__image main-slider-three__image--top">
+                                        <img src="{% static 'assets/images/main-slider-3-5.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image">
+                                        <img src="{% static 'assets/images/main-slider-3-6.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image">
+                                        <img src="{% static 'assets/images/main-slider-3-7.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                    <div class="main-slider-three__image main-slider-three__image--top">
+                                        <img src="{% static 'assets/images/main-slider-3-8.jpg' %}" alt="main-slider" class="slider-image">
+                                    </div><!-- /.main-slider-three__image -->
+                                </div><!-- /.main-slider-three__images -->
+                            </div><!-- /.col-lg-12 -->
+                        </div><!-- /.row gutter-y-60 -->
+                    </div><!-- /.container -->
+                    <img src="{% static 'assets/images/shapes/main-slider-shape-3-1.png' %}" alt="shape" class="main-slider-three__shape-one slider-image">
+                    <img src="{% static 'assets/images/shapes/main-slider-shape-3-2.png' %}" alt="shape" class="main-slider-three__shape-two slider-image">
+                    <div class="main-slider-three__box-one"></div><!-- /.box-one -->
+                    <div class="main-slider-three__box-two"></div><!-- /.box-two -->
+                    <div class="main-slider-three__circle-one main-slider-three__circle"></div><!-- /.circle-one -->
+                    <div class="main-slider-three__circle-two main-slider-three__circle"></div><!-- /.circle-two -->
+                    <div class="main-slider-three__circle-three main-slider-three__circle"></div><!-- /.circle-three -->
+                    <div class="main-slider-three__circle-four main-slider-three__circle"></div><!-- /.circle-four -->
+                </div><!-- /.main-slider-three__item -->
+            </div><!-- /.main-slider-three__carousel -->
+        </section><!-- /.main-slider-three -->
+
+
+        <section class="course-category course-category--home-3 section-space-bottom">
+            <div class="container">
+                <div class="row gutter-y-30">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="course-category__card course-category__card--1">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--secondary">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-briefcase"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Expert <br> Faculty</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-category__card course-category__card--2">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--pink">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-art-studies"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Flexible  <br> Learning</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="course-category__card course-category__card--3">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--secondary">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-self-confidence"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Comprehensive  <br> Curriculum</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="course-category__card course-category__card--4">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--yellow2">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-setting"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Accreditation  </h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="course-category__card course-category__card--5">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--base">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-healthcare"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Placement  <br> Assistance</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-category__card course-category__card--6">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--primary">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-coding-1"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Interview <br> Grooming</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="course-category__card course-category__card--7">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--blue">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-clapperboard"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Learning  <br> Support system</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="course-category__card course-category__card--8">
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box course-category__card__icon-box--red">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-megaphone"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Certificate <br> Upon Completion</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                </div><!-- /.row gutter-y-30 -->
+            </div><!-- /.container -->
+        </section><!-- /.course-category section-space-bottom -->
+
+        <section class="about-three" id="about">
+            <div class="container-fluid">
+                <div class="about-three__inner section-space">
+                    <div class="container">
+                        <div class="row gutter-y-50 align-items-center">
+                            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
+                                <div class="about-three__image">
+                                    <div class="about-three__image__inner">
+                                        <img src="{% static 'assets/images/about-3-1.jpg' %}" alt="about">
+                                        <div class="about-three__experience">
+                                            <span class="about-three__experience__icon">
+                                                <i class="icon-connectibity"></i>
+                                            </span><!-- /.about-three__experience__icon -->
+                                            <div class="about-three__experience__content">
+                                                <h3 class="about-three__experience__title">8+</h3><!-- /.experience__title -->
+                                                <p class="about-three__experience__text">Years of experience</p><!-- /.experience__text -->
+                                            </div><!-- /.about-three__experience__content -->
+                                        </div><!-- /.about-three__experience -->
+                                        <div class="total-student">
+                                            <div class="total-student__inner">
+                                                
+                                                <h4 class="total-student__text count-box">
+                                                    <span class="count-text" data-stop="200" data-speed="1500">0</span><span>k+ <br> Students</span>
+                                                </h4><!-- /.total-student__text -->
+                                            </div><!-- /.total-student__inner -->
+                                        </div><!-- /.total-student -->
+                                        <div class="about-three__image__shape-one"></div><!-- /.about-three__image__shape-one -->
+                                        <div class="about-three__image__shape-two"></div><!-- /.about-three__image__shape-two -->
+                                    </div><!-- /.about-three__image__inner -->
+                                    <div class="about-three__image__box"></div><!-- /.about-three__image__box -->
+                                    <img src="{% static 'assets/images/shapes/about-shape-3-2.png' %}" alt="shape" class="about-three__image__shape-three">
+                                </div><!-- /.about-three__image -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="about-three__content">
+                                    <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                        <h6 class="sec-title__tagline">about us</h6><!-- /.sec-title__tagline -->
+                                        <h3 class="sec-title__title">Learn & Grow <span class="sec-title__title__text">Your Skills</span> From <span class="sec-title__title__shape">Anywhere</span></h3><!-- /.sec-title__title -->
+                                    </div><!-- /.sec-title -->
+                                    <div class="about-three__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                        <p class="about-three_text">What sets Metailearn apart is its real-world training approach, designed by industry veterans and tailored for future-ready skills. Our programs blend cutting-edge knowledge with hands-on experience, ensuring learners are not only certified but also confident and job-ready.</p><!-- /.about-three_text -->
+                                    </div><!-- /.about-three__description -->
+                                    <div class="about-three__content__inner">
+                                        <div class="row gutter-y-30">
+                                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                                <div class="about-three__info">
+                                                    <h3 class="about-three__info__title">Flexible Timings</h3><!-- /.about-three__info__title -->
+                                                    <p class="about-three__info__text">Ability to adjust schedules to accommodate different time zones</p><!-- /.about-three__info__text -->
+                                                </div><!-- /.about-three__info -->
+                                            </div><!-- /.col-sm-6 -->
+                                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                                                <div class="about-three__info">
+                                                    <h3 class="about-three__info__title">expert instructor</h3><!-- /.about-three__info__title -->
+                                                    <p class="about-three__info__text">Teaching methods to different learning styles</p><!-- /.about-three__info__text -->
+                                                </div><!-- /.about-three__info -->
+                                            </div><!-- /.col-sm-6 -->
+                                        </div><!-- /.row gutter-y-30 -->
+                                    </div><!-- /.about-three__content__inner -->
+                                    <div class="about-three__bottom wow fadeInUp" data-wow-duration="1500ms">
+                                        <a href="{% url 'about' %}" class="eduhive-btn">
+                                            <span>About us</span>
+                                            <span class="eduhive-btn__icon">
+                                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                            </span>
+                                        </a><!-- /.eduhive-btn -->
+                                        <div class="about-three__call">
+                                            <span class="about-three__call__icon">
+                                                <i class="icon-telephone"></i>
+                                            </span><!-- /.about-three__call__icon -->
+                                            <div class="about-three__call__content">
+                                                <p class="about-three__call__title">Call Us Now</p><!-- /.call__title -->
+                                                <h4 class="about-three__call__number">
+                                                    <a href="tel:+91 8714975439">+91 8714975439, 8590051541</a>
+                                                </h4><!-- /.about-three__call__number -->
+                                            </div><!-- /.about-three__call__content -->
+                                        </div><!-- /.about-three__call -->
+                                    </div><!-- /.about-three__bottom -->
+                                </div><!-- /.about-three__content -->
+                            </div><!-- /.col-lg-6 -->
+                        </div><!-- /.row gutter-y-50 -->
+                    </div><!-- /.container -->
+                    <img src="{% static 'assets/images/shapes/about-shape-3-1.png' %}" alt="shape" class="about-three__shape-one">
+                    <div class="about-three__circle-one"></div><!-- /.about-three__circle-one -->
+                    <div class="about-three__circle-two"></div><!-- /.about-three__circle-two -->
+                    <div class="about-three__circle-three"></div><!-- /.about-three__circle-three -->
+                </div><!-- /.about-three__inner section-space -->
+            </div><!-- /.container-fluid -->
+            <img src="{% static 'assets/images/shapes/about-shape-3-3.png' %}" alt="shape" class="about-three__shape-two">
+        </section><!-- /.about-three -->
+
+        <section class="funfact-one funfact-one--home-3 funfact-one--round">
+            <div class="container">
+                <div class="funfact-one__grid">
+                    <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="funfact-one__icon">
+                            <span class="funfact-one__icon__inner"><i class="icon-connectibity"></i></span>
+                        </div><!-- /.funfact-one__icon -->
+                        <h3 class="funfact-one__title count-box">
+                            <span class="count-text" data-stop="30" data-speed="1500">0</span>
+                            <span>k+</span>
+                        </h3><!-- /.funfact-one__title -->
+                        <p class="funfact-one__text">Satisfied Student</p><!-- /.funfact-one__text -->
+                    </div><!-- /.funfact-one__item -->
+                    <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="funfact-one__icon">
+                            <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
+                        </div><!-- /.funfact-one__icon -->
+                        <h3 class="funfact-one__title count-box">
+                            <span class="count-text" data-stop="6500" data-speed="1500">0</span>
+                            <span>+</span>
+                        </h3><!-- /.funfact-one__title -->
+                        <p class="funfact-one__text">Class Completed</p><!-- /.funfact-one__text -->
+                    </div><!-- /.funfact-one__item -->
+                    <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="funfact-one__icon">
+                            <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
+                        </div><!-- /.funfact-one__icon -->
+                        <h3 class="funfact-one__title count-box">
+                            <span class="count-text" data-stop="6561" data-speed="1500">0</span>
+                            <span>+</span>
+                        </h3><!-- /.funfact-one__title -->
+                        <p class="funfact-one__text">Active Students</p><!-- /.funfact-one__text -->
+                    </div><!-- /.funfact-one__item -->
+                    <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="funfact-one__icon">
+                            <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
+                        </div><!-- /.funfact-one__icon -->
+                        <h3 class="funfact-one__title count-box">
+                            <span class="count-text" data-stop="400" data-speed="1500">0</span>
+                            <span>+</span>
+                        </h3><!-- /.funfact-one__title -->
+                        <p class="funfact-one__text">Experts Instructors</p><!-- /.funfact-one__text -->
+                    </div><!-- /.funfact-one__item -->
+                </div><!-- /.rfunfact-one__grid -->
+            </div><!-- /.container -->
+        </section><!-- /.funfact-one -->
+
+        <section class="courses-three section-space2" id="courses">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">our courses</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="row gutter-y-30">
+                    {% for item in course %}
+                    <div class="col-lg-6">
+                        <div class="course-card course-card--two wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <div class="course-card__image">
+                                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">{{ item.level }}</div>
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span>
+                                        {{ item.duration_months }} Months
+                                    </div>
+                                </div>
+                                <h3 class="course-card__title">
+                                    <a href="{% url 'course_details' item.id %}">{{ item.title }}</a>
+                                </h3>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span>
+                                        {{ item.lessons }} Lessons
+                                    </div>
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span>
+                                        {{ item.student_count }} Students
+                                    </div>
+                                </div>
+                                <div class="course-card__ratings">
+                                    {% comment %} <div class="eduhive-ratings">
+                                        {% for i in "12345"|slice:":item.rating" %}
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        {% endfor %}
+                                    </div> {% endcomment %}
+                                    <div class="course-card__ratings">
+                                        <div class="testimonial-rate">
+                                            {% for i in "12345"|make_list %}
+                                                {% if forloop.counter <= item.rating %}
+                                                    <i class="fas fa-star text-warning"></i>
+                                                {% else %}
+                                                    <i class="far fa-star text-warning"></i>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <h4 class="course-card__price">₹<span>{{ item.course_fee }}</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center mt-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                    
+                    <a href="{% url 'courses' %}" class="eduhive-btn">
+                        <span>More Courses</span>
+                        <span class="eduhive-btn__icon">
+                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                        </span>
+                    </a><!-- /.eduhive-btn -->
+                </div>
+                
+                
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/courses-shape-3-1.png' %}" alt="shape" class="courses-three__shape-one">
+            <img src="{% static 'assets/images/shapes/courses-shape-3-2.png' %}" alt="shape" class="courses-three__shape-two">
+            <div class="courses-three__box-one"></div><!-- /.courses-three__box-one -->
+            <div class="courses-three__box-two"></div><!-- /.courses-three__box-two -->
+        </section><!-- /.courses-three section-space2 -->
+        
+
+        <section class="offer-one section-space-top">
+            <div class="container">
+                <div class="row gutter-y-60">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="offer-one__image">
+                            <img src="{% static 'assets/images/offer-1-1.jpg' %}" alt="offer image" class="offer-one__image__one">
+                            <img src="{% static 'assets/images/offer-1-2.jpg' %}" alt="offer image" class="offer-one__image__two">
+                            <img src="{% static 'assets/images/offer-shape-1-1.png' %}" alt="offer shape" class="offer-one__image__shape">
+                        </div><!-- /.offer-one__image -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="offer-one__content">
+                            <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <h6 class="sec-title__tagline">who we are</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title"><span class="sec-title__title__shape">We Offer</span> The <span class="sec-title__title__text">Best Carrier</span></h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <div class="offer-one__inner">
+                                <div class="offer-one__item wow fadeInUp" data-wow-duration="1500ms">
+                                    <div class="offer-one__item__icon offer-one__item__icon--primary">
+                                        <i class="icon-instructors"></i>
+                                    </div><!-- /.offer-one__item__icon -->
+                                    <div class="offer-one__item__content">
+                                        <h4 class="offer-one__item__title">Industry Expert Instructor</h4>
+                                        <p class="offer-one_item_text">Our instructors are seasoned professionals like Mr. Dalvy Mathew (Founder & Senior Cybersecurity Expert), who bring real-world experience from top-tier industries.</p>
+                                    </div><!-- /.offer-one__item__content -->
+                                </div><!-- /.offer-one__item -->
+                                <div class="offer-one__item wow fadeInUp" data-wow-duration="1500ms">
+                                    <div class="offer-one__item__icon offer-one__item__icon--secondary">
+                                        <i class="icon-copy-writing"></i>
+                                    </div><!-- /.offer-one__item__icon -->
+                                    <div class="offer-one__item__content">
+                                        <h4 class="offer-one__item__title">Up-to-Date Course Content</h4>
+                                        <p class="offer-one_item_text">Our curriculum is continuously updated to reflect the latest industry trends, tools, and certifications. Whether it’s Cybersecurity, AI, or Cloud Computing.</p>
+                                    </div><!-- /.offer-one__item__content -->
+                                </div><!-- /.offer-one__item -->
+                                <div class="offer-one__item wow fadeInUp" data-wow-duration="1500ms">
+                                    <div class="offer-one__item__icon offer-one__item__icon--base">
+                                        <i class="icon-community"></i>
+                                    </div><!-- /.offer-one__item__icon -->
+                                    <div class="offer-one__item__content">
+                                        <h4 class="offer-one__item__title">Biggest Student Community</h4>
+                                        <p class="offer-one_item_text">Join a thriving network of 10,00+ learners, alumni, and industry experts.
+                                            Metailearn’s community fosters collaboration and career growth through: </p>
+                                    </div><!-- /.offer-one__item__content -->
+                                </div><!-- /.offer-one__item -->
+                            </div><!-- /.offer-one__inner -->
+                        </div><!-- /.offer-one__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row gutter-y-60 -->
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/offer-shape-1-3.png' %}" alt="shape" class="offer-one__shape">
+            <div class="offer-one__shape-box"></div><!-- /.offer-one__shape -->
+        </section><!-- /.offer-one section-space-top -->
+
+        <section class="testimonials-three section-space2" id="testimonials">
+            <div class="testimonials-three__bg" style="background-image: url(static/assets/images/testimonials-bg-3-1.png);">
+            </div><!-- /.testimonials-three__bg -->
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title">people <span class="sec-title__title__text">say about</span> <span class="sec-title__title__shape">eduhive</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+            <div class="testimonials-three__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav eduhive-owl__carousel--with-shadow owl-theme owl-carousel"
+            data-owl-options='{
+                "items": 3,
+                "margin": 30,
+                "smartSpeed": 700,
+                "loop":true,
+                "autoplay": 6000,
+                "nav":true,
+                "dots":false,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "responsive":{
+                    "0":{"items": 1,"margin": 10},
+                    "768":{"items": 2,"margin": 30},
+                    "1200":{"items": 3,"margin": 30}
+                }
+            }'>
+            
+            {% for testimonial in testimonials %}
+            <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="{{ forloop.counter0 }}00ms">
+                <div class="testimonial-card-three">
+                    <div class="testimonial-card-three__image">
+                        <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+                    </div>
+                    <div class="testimonial-card-three__content">
+                        <div class="testimonial-card-three__icon">
+                            <span class="icon-quote"></span>
+                        </div>
+                        <div class="testimonial-card-three__identity">
+                            <h5 class="testimonial-card-three__name">{{ testimonial.name }}</h5>
+                            <p class="testimonial-card-three__designation">{{ testimonial.designation }}</p>
+                        </div>
+                        <p class="testimonial-card-three__quote">{{ testimonial.message }}</p>
+                        {% comment %} <div class="eduhive-ratings">
+                            {% for i in "12345"|slice:":testimonial.rating"|make_list %}
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                            {% endfor %}
+                        </div> {% endcomment %}
+                        <div class="eduhive-ratings">
+                            {% for i in "12345"|make_list %}
+                                <span class="eduhive-ratings__icon">
+                                    {% if forloop.counter <= testimonial.rating %}
+                                        <i class="fa fa-star text-warning"></i>
+                                    {% else %}
+                                        <i class="fa fa-star-o text-warning"></i>  {# fa-star-o is the outlined star #}
+                                    {% endif %}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div><!-- /.testimonials-three__carousel -->
+
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/testimonial-shape-3-1.png' %}" alt="shape" class="testimonials-three__shape-one">
+            <img src="{% static 'assets/images/shapes/testimonial-shape-3-2.png' %}" alt="shape" class="testimonials-three__shape-two">
+            <img src="{% static 'assets/images/shapes/testimonial-shape-3-3.png' %}" alt="shape" class="testimonials-three__shape-three">
+            <div class="testimonials-three__shape-box"></div><!-- /.testimonials-three__shape-box -->
+        </section><!-- /.testimonials-three section-space2 -->
+
+        <section class="instructors-three section-space2" id="instructors">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="instructors-three__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel--basic-nav owl-carousel owl-theme"
+                data-owl-options='{
+                    "items": 1,
+                    "margin": 10,
+                    "loop": true,
+                    "smartSpeed": 700,
+                    "nav": false,
+                    "dots": true,
+                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                    "autoplay": true,
+                    "responsive": {
+                        "0": {
+                            "items": 1,
+                            "nav": true,
+                            "dots": false,
+                            "margin": 10
+                        },
+                        "576": {
+                            "items": 2,
+                            "margin": 30
+                        },
+                        "992": {
+                            "items": 3,
+                            "margin": 30
+                        },
+                        "1200": {
+                            "items": 4,
+                            "margin": 30,
+                            "dots": false
+                        }
+                    }
+                }'>
+
+                {% for member in instructor %}
+                <div class="item">
+                    <div class="instructor-card-three {% if forloop.first %}instructor-card-three--top-identity{% endif %} wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='{{ forloop.counter0 }}00ms'>
+                        <div class="instructor-card-three__image">
+                            <div class="instructor-card-three__image__inner">
+                                <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                            </div>
+                        </div>
+                        <div class="instructor-card-three__identity">
+                            <h3 class="instructor-card-three__name">
+                                <a href="#">{{ member.name }}</a>
+                            </h3>
+                            <p class="instructor-card-three__designation">{{ member.designation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            </div><!-- /.container -->
+        </section><!-- /.instructors-three section-space2 -->
+
+        <section class="blog-three section-space">
+            <div class="container">
+                <div class="row gutter-y-50 align-items-center">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="blog-three__content">
+                            <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog <br> news</span></h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <div class="blog-three__description">
+                                <p class="blog-three__text">Are there any leftovers in the kitchen? that's not on the roadmap, or drink from the firehose, nor time vampire what about scaling components to a global audience</p><!-- /.blog-three__text -->
+                            </div><!-- /.blog-three__description -->
+                            <div class="blog-three__custome-navs"></div><!-- /.blog-three__custome-navs -->
+                        </div><!-- /.blog-three__content -->
+                    </div><!-- /.col-xl-4 col-lg-7 -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="eduhive-stretch-element-inside-column">
+                            <div class="blog-three__carousel eduhive-owl__carousel owl-carousel owl-theme" data-owl-options='{
+                        "items": 1,
+                        "margin": 30,
+                        "loop": true,
+                        "smartSpeed": 700,
+                        "nav": true,
+                        "dots": false,
+                        "navContainer": ".blog-three__custome-navs",
+                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                        "autoplay": true,
+                        "responsive": {
+                            "0":{
+                                "items": 1,
+                                "margin": 10
+                            },
+                            "576":{
+                                "items": 1.5
+                            },
+                            "768":{
+                                "items": 2.2
+                            },
+                            "992":{
+                                "items": 1.55
+                            },
+                            "1200":{
+                                "items": 2.2
+                            },
+                            "1360":{
+                                "items": 2.25
+                            },
+                            "1400":{
+                                "items": 2.35
+                            },
+                            "1536":{
+                                "items": 2.45
+                            },
+                            "1600":{
+                                "items": 2.6
+                            },
+                            "1800":{
+                                "items": 2.94
+                            }
+                        }
+                    }'>
+                    {% for post in blog %}
+                    <div class="item">
+                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='{{ forloop.counter0 }}00ms'>
+                            <div class="blog-card__image">
+                                <img src="{{ post.main_image.url }}" alt="{{ post.blog_heading }}">
+                                <a href="{% url 'blog_details' post.id %}" class="blog-card__image__link">
+                                    <span class="sr-only">{{ post.blog_heading }}</span>
+                                </a>
+                                {% if post.date %}
+                                <div class="blog-card__date">
+                                    <span class="blog-card__date__day">{{ post.date.day }}</span>
+                                    <span class="blog-card__date__month">{{ post.date|date:"b" }}</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="blog-card__content">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="far fa-user"></i>
+                                            </span>
+                                            by Admin
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="icon-comments"></i>
+                                            </span>
+                                            2 Comments
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-card__title">
+                                    <a href="{% url 'blog_details' post.id %}">{{ post.blog_heading }}</a>
+                                </h3>
+                                <a href="{% url 'blog_details' post.id %}" class="blog-card__link">
+                                    read More
+                                    <span class="blog-card__link__icon">
+                                        <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                               
+                                
+                                
+                            </div><!-- /.blog-three__carousel -->
+                        </div><!-- /.eduhive-stretch-element-inside-column -->
+                    </div><!-- /.col-xl-8 col-lg-5 -->
+                </div><!-- /.row gutter-y-50 align-items-center -->
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/blog-shape-3-1.png' %}" alt="shape" class="blog-three__shape-one">
+            <div class="blog-three__shape-two"></div><!-- /.blog-three__shape-two -->
+            <div class="blog-three__shape-three"></div><!-- /.blog-three__shape-three -->
+        </section><!-- /.blog-three section-space -->
+
+        <div class="client-carousel @@extraClassName">
+            <div class="container-fluid">
+                <div class="client-carousel__inner">
+                    <div class="container">
+                        <div class="client-carousel__content">
+                            <h4 class="client-carousel__title">Our Partners</h4><!-- /.client-carousel__title -->
+                        </div><!-- /.client-carousel__content -->
+                        <div class="client-carousel__carousel eduhive-owl__carousel owl-theme owl-carousel" data-owl-options='{
+                    "items": 5,
+                    "margin": 65,
+                    "smartSpeed": 700,
+                    "loop":true,
+                    "autoplay": 6000,
+                    "nav":false,
+                    "dots":false,
+                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                    "responsive":{
+                        "0":{
+                            "items": 2,
+                            "margin": 50
+                        },
+                        "500":{
+                            "items": 3,
+                            "margin": 60
+                        },
+                        "768":{
+                            "items": 3,
+                            "margin": 80
+                        },
+                        "992":{
+                            "items": 4,
+                            "margin": 60
+                        },
+                        "1200":{
+                            "items": 5,
+                            "margin": 163
+                        }
+                    }
+                    }'>
+                    {% for item in partner %}
+                    <div class="client-carousel__item">
+                        <img src="{{ item.logo.url }}" alt="{{ item.name }}" class="client-carousel__image">
+                        <img src="{{ item.logo.url }}" alt="{{ item.name }}" class="client-carousel__hover-image">
+                    </div><!-- /.owl-slide-item-->
+                    {% endfor %}
+                    
+                        </div><!-- /.client-carousel__carousel -->
+                    </div><!-- /.container -->
+                </div><!-- /.client-carousel__inner -->
+            </div><!-- /.container-fluid -->
+        </div><!-- /.client-carousel -->
+
+
+        <footer class="main-footer section-space-top">
+            <div class="container">
+               
+                <div class="row gutter-y-40">
+                    <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="footer-widget footer-widget--about">
+                            <h2 class="footer-widget__title">About Us</h2><!-- /.footer-widget__title -->
+                            <p class="footer-widget__about-text">What sets Metailearn apart is its real-world training approach, designed by industry veterans and tailored for future-ready skills.</p><!-- /.footer-widget__about-text -->
+                            <ul class="footer-widget__info">
+                                <li>
+                                    <span class="footer-widget__info__icon"><i class="icon-location"></i></span>
+                                    <a href="https://www.google.com/maps">Metailearn,Kannattu Square,Kakkanad,Athani</a>
+                                </li>
+                                <li>
+                                    <span class="footer-widget__info__icon"><i class="icon-email"></i></span>
+                                    <a href="mailto:upport@metailearn.com">support@metailearn.com</a>
+                                </li>
+                                <li>
+                                    <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
+                                    <a href="tel:+8714975439">+91 8714975439, 8590051541</a>
+                                </li>
+                            </ul><!-- /.footer-widget__info -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-xl-3 col-lg-4 -->
+                    <div class="col-xl-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="footer-widget footer-widget--links">
+                            <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
+                            <ul class="list-unstyled footer-widget__links">
+                                <li>
+                                    <a href="{% url 'about' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        About 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'courses' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Our Courses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'instructors' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Instructors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'instructor-details' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Instructor Details
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul><!-- /.list-unstyled footer-widget__links -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-xl-3 col-md-4 col-sm-6 -->
+                    <div class="col-xl-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="footer-widget footer-widget--links">
+                            <h2 class="footer-widget__title">Courses</h2><!-- /.footer-widget__title -->
+                            <ul class="list-unstyled footer-widget__links">
+                                <li>
+                                    <a href="{% url 'cyber_security' %}">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        cyber Security
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="digital-marketing.html">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Digital Marketing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="graphics-design.html">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Graphics Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="uiux-design.html">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        UI/UX Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="data-science.html">
+                                        <span class="footer-widget__links__icon">
+                                            <i class="icon-double-arrow"></i>
+                                        </span>
+                                        Data Science
+                                    </a>
+                                </li>
+                            </ul><!-- /.list-unstyled footer-widget__links -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-xl-3 col-md-4 col-sm-6 -->
+                    <div class="col-xl-3 col-md-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="footer-widget footer-widget--gallery">
+                            <h2 class="footer-widget__title">Our Gallery</h2><!-- /.footer-widget__title -->
+                            <div class="footer-widget__gallery">
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-6.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-2.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-3.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-4.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-5.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                                <a href="gallery.html" class="footer-widget__gallery__link">
+                                    <img src="{% static 'assets/images/footer-widget-gallery-6.jpg' %}" alt="footer-widget-gallery">
+                                    <span class="footer-widget__gallery__icon icon-plus"></span>
+                                </a><!-- /.footer-widget__gallery__link -->
+                            </div><!-- /.footer-widget__gallery -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-xl-3 col-md-4 -->
+                </div><!-- /.row gutter-y-40 -->
+            </div><!-- /.container -->
+            <div class="main-footer__bottom">
+                <div class="container">
+                    <div class="main-footer__bottom__inner">
+                        <p class="main-footer__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span>,<a href="https://tinos.co.in/">Developed by Tinos Software and Security Solutions LLP.</a>
+                        </p>
+                    </div><!-- /.main-footer__inner -->
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__bottom -->
+            <img src="{% static 'assets/images/shapes/footer-shape-1.png' %}" alt="shape" class="main-footer__shape-one">
+            <img src="{% static 'assets/images/shapes/footer-shape-2.png' %}" alt="shape" class="main-footer__shape-two">
+            <img src="{% static 'assets/images/shapes/footer-shape-4.png' %}" alt="shape" class="main-footer__shape-four">
+            <img src="{% static 'assets/images/shapes/footer-shape-5.png' %}" alt="shape" class="main-footer__shape-five">
+        </footer><!-- /.main-footer section-space-top -->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div><!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
+            <div class="logo-box logo-retina">
+                <a href="index.html" aria-label="logo image">
+                    <img src="{% static 'assets/images/Metalogo.png' %}" width="209" alt="" />
+                </a>
+            </div><!-- /.logo-box -->
+            <div class="mobile-nav__container"></div><!-- /.mobile-nav__container -->
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
+                    <a href="mailto:needhelp@eduhive.com">needhelp@company.com</a>
+                </li>
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
+                    <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__social social-links-two">
+                <a href="https://facebook.com">
+                    <span class="social-links-two__icon">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </span><!-- /.social-links-two__icon -->
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://twitter.com">
+                    <span class="social-links-two__icon">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </span><!-- /.social-links-two__icon -->
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://instagram.com">
+                    <span class="social-links-two__icon">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </span><!-- /.social-links-two__icon -->
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="https://youtube.com">
+                    <span class="social-links-two__icon">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </span><!-- /.social-links-two__icon -->
+                    <span class="sr-only">Youtube</span>
+                </a>
+            </div><!-- /.mobile-nav__social -->
+        </div><!-- /.mobile-nav__content -->
+    </div><!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="eduhive-btn">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <script src="{% static 'assets/vendors/jquery/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/tiny-slider/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets/vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/js/owlcarousel2-filter.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/js/owlcarousel2-progressbar.js' %}"></script>
+    <script src="{% static 'assets/vendors/wow/wow.js' %}"></script>
+    <script src="{% static 'assets/vendors/imagesloaded/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'assets/vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circleType/jquery.circleType.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-lettering/jquery.lettering.min.js' %}"></script>
+    <!-- template js -->
+    <script src="{% static 'assets/js/eduhive.js' %}"></script>
+</body>
+
+</html>

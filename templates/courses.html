@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <div class="page-header__content">
+            <ul class="eduhive-breadcrumb list-unstyled">
+                <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="{% url 'index' %}">Home</a></li>
+                <li><span>Courses</span></li>
+            </ul><!-- /.eduhive-breadcrumb list-unstyled -->
+            <h2 class="page-header__title">Our Courses</h2>
+        </div><!-- /.page-header__content -->
+    </div><!-- /.container -->
+    <img src="{% static 'assets/images/shapes/page-header-shape-1.png' %}" alt="shape" class="page-header__shape-one">
+    <img src="{% static 'assets/images/shapes/page-header-shape-2.png' %}" alt="shape" class="page-header__shape-two">
+    <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
+    <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
+</section><!-- /.page-header -->
+
+
+<section class="courses-page section-space">
+    <div class="container">
+        <div class="row gutter-y-30">
+            {% for c in course %}
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                    <div class="course-card__image">
+                        <img src="{{ c.image.url }}" alt="{{ c.course_name }}">
+                        {% comment %} <div class="course-card__ratings">
+                            <div class="eduhive-ratings">
+                                {% for i in "12345" %}
+                                    <span class="eduhive-ratings__icon">
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                {% endfor %}
+                            </div>
+                            <p class="course-card__ratings__text">{{ c.rating }} Ratings</p>
+                        </div> {% endcomment %}
+                        <div class="course-card__ratings">
+                            <div class="eduhive-ratings testimonial-rate">
+                                {% for i in "12345"|make_list %}
+                                    {% if forloop.counter <= c.rating %}
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fas fa-star text-warning"></i>
+                                        </span>
+                                    {% else %}
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="far fa-star text-warning"></i>
+                                        </span>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+
+                    <div class="course-card__content">
+                        <div class="course-card__content__top">
+                            <div class="course-card__category">{{ c.level|default:"Beginner" }}</div>
+                            <div class="course-card__duration">
+                                <span class="course-card__duration__icon"><i class="icon-clock"></i></span>
+                                {{ c.duration_months|default:"0" }} Months
+                            </div>
+                        </div>
+                        <h3 class="course-card__title">
+                            <a href="{% url 'course_details' c.id %}">{{ c.course_name }}</a>
+                        </h3>
+                        <div class="course-card__info">
+                            <div class="course-card__lessons">
+                                <span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>
+                                {{ c.lessons|default:"0" }} Lessons
+                            </div>
+                            <div class="course-card__students">
+                                <span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>
+                                {{ c.student_count|default:"0" }} Students
+                            </div>
+                        </div>
+                        <h4 class="course-card__price">${{ c.course_fee|default:"0.00" }}</h4>
+                    </div>
+
+                    <div class="course-card__hover" style="background-image: url({% static 'assets/images/shapes/course-card-bg-1-1.png' %});">
+                        <div class="course-card__hover__content">
+                            <div class="course-card__content__top course-card__content__top--hover">
+                                <div class="course-card__category">{{ c.level|default:"Beginner" }}</div>
+                                <div class="course-card__duration">
+                                    <span class="course-card__duration__icon"><i class="icon-clock"></i></span>
+                                    {{ c.duration_months|default:"0" }} Months
+                                </div>
+                            </div>
+                            <h3 class="course-card__title course-card__title--hover">
+                                <a href="{% url 'course_details' c.id %}">{{ c.title|default:c.course_name }}</a>
+                            </h3>
+                            <p class="course-card__text">{{ c.coaching_details|safe|truncatewords:20 }}</p>
+                            <div class="course-card__ratings course-card__ratings--hover">
+                                {% comment %} <div class="eduhive-ratings">
+                                    {% for i in "12345" %}
+                                        <span class="eduhive-ratings__icon"><i class="fa fa-star"></i></span>
+                                    {% endfor %}
+                                </div> {% endcomment %}
+                                <div class="eduhive-ratings testimonial-rate">
+                                    {% for i in "12345"|make_list %}
+                                        {% if forloop.counter <= c.rating %}
+                                            <span class="eduhive-ratings__icon"><i class="fas fa-star text-warning"></i></span>
+                                        {% else %}
+                                            <span class="eduhive-ratings__icon"><i class="far fa-star text-warning"></i></span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                               
+                            </div>
+                            <a href="{% url 'course_details' c.id %}" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                <span>Course Details</span>
+                                <span class="eduhive-btn__icon"><i class="icon-right-arrow"></i></span>
+                            </a>
+                            <div class="course-card__info course-card__info--hover">
+                                <div class="course-card__lessons">
+                                    <span class="course-card__lessons__icon"><i class="icon-open-book"></i></span>
+                                    {{ c.lessons|default:"0" }} Lessons
+                                </div>
+                                <div class="course-card__students">
+                                    <span class="course-card__students__icon"><i class="icon-multiple-users-silhouette"></i></span>
+                                    {{ c.student_count|default:"0" }} Students
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <p>No courses available right now.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+        {% endblock %}

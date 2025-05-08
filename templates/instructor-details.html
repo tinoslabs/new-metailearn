@@ -1,0 +1,1151 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+        <section class="instructor-details section-space">
+            <div class="container">
+                <div class="instructor-details__inner">
+                    <div class="instructor-details__image wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <img src="{% static 'assets/images/instructors/instructor-d-1-1.jpg' %}" alt="Mike Hardson">
+                        <div class="social-links-two">
+                            <a href="https://facebook.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </span><!-- /.social-links-two__icon -->
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </span><!-- /.social-links-two__icon -->
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://instagram.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </span><!-- /.social-links-two__icon -->
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                            <a href="https://youtube.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </span><!-- /.social-links-two__icon -->
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </div><!-- /.social-links-two -->
+                        <div class="instructor-details__identity">
+                            <h3 class="instructor-details__name">Mike Hardson</h3><!-- /.instructor-details__name -->
+                            <p class="instructor-details__designation">Sr. App Developer</p>
+                            <!-- /.instructor-details__designation -->
+                        </div><!-- /.instructor-details__identity -->
+                    </div><!-- /.instructor-details__image -->
+                    <div class="instructor-details__about wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="instructor-details__about__inner">
+                            <h3 class="instructor-details__about__title">about me</h3><!-- /.instructor-details__about__title -->
+                            <p class="instructor-details__about__description">Lorem ipsum is simply free text used by copytyping
+                                refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto
+                                beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed
+                                sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the ndustry standard dummy.</p><!-- /.instructor-details__about__description -->
+                        </div><!-- /.instructor-details__about__inner -->
+                        <ul class="instructor-details__contact list-unstyled">
+                            <li>
+                                <div class="instructor-details__contact__icon">
+                                    <span class="instructor-details__contact__icon__inner">
+                                        <i class="icon-location"></i>
+                                    </span>
+                                </div>
+                                <div class="instructor-details__contact__content">
+                                    <h3 class="instructor-details__contact__title">Mailing Address</h3>
+                                    <a href="https://www.google.com/maps/@23.506657,90.3443647,7z?entry=ttu" class="instructor-details__contact__link">901 N Pitt Str., Suite 170 <br> Alexandria, USA</a>
+                                </div>
+                            </li><!-- /.item -->
+                            <li>
+                                <div class="instructor-details__contact__icon">
+                                    <span class="instructor-details__contact__icon__inner">
+                                        <i class="icon-telephone"></i>
+                                    </span>
+                                </div>
+                                <div class="instructor-details__contact__content">
+                                    <h3 class="instructor-details__contact__title">Quick Contact</h3>
+                                    <a href="tel:+(406)555-0120" class="instructor-details__contact__link">(406) 555-0120</a>
+                                </div>
+                            </li><!-- /.item -->
+                            <li>
+                                <div class="instructor-details__contact__icon">
+                                    <span class="instructor-details__contact__icon__inner">
+                                        <i class="icon-email"></i>
+                                    </span>
+                                </div>
+                                <div class="instructor-details__contact__content">
+                                    <h3 class="instructor-details__contact__title">support email</h3>
+                                    <a href="mailto:info@eduhive.com" class="instructor-details__contact__link">info@eduhive.com</a>
+                                </div>
+                            </li><!-- /.item -->
+                        </ul><!-- /.instructor-details__contact -->
+                    </div><!-- /.instructor-details__about -->
+                </div><!-- /.instructor-details__inner -->
+            </div><!-- /.container -->
+        </section><!-- /.instructor-details section-space -->
+
+        <section class="courses-two courses-two--instructor-details section-space2">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">our courses</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+            </div><!-- /.container -->
+            <div class="courses-two__container container">
+                <div class="courses-two__carousel eduhive-owl__carousel--progress eduhive-owl__carousel--with-counter eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-progress-options='{
+            "size": "1px",
+            "margin": "0 auto",
+            "foregroundColor": "var(--eduhive-border-color)",
+            "color": "var(--eduhive-base)",
+            "borderRadius": 0,
+            "transitionInterval": 1,
+            "progressBarClassName": "courses-two__carousel__progress-bar",
+            "scrollerClassName": "courses-two__carousel__scroller"
+            }' data-owl-options='{
+			"items": 1,
+			"margin": 10,
+			"loop": false,
+			"smartSpeed": 700,
+			"nav": true,
+			"dots": false,
+            "navContainer": ".courses-two__custome-navs",
+			"navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+			"autoplay": true,
+			"responsive": {
+				"0": {
+					"items": 1,
+					"margin": 10
+				},
+				"576": {
+					"items": 1,
+					"margin": 30,
+                    "stagePadding": 100
+				},
+				"768": {
+					"items": 1,
+					"margin": 30,
+                    "stagePadding": 190
+				},
+				"992": {
+					"items": 2,
+					"margin": 30,
+                    "stagePadding": 120
+				},
+				"1200": {
+					"items": 2,
+					"margin": 30,
+                    "stagePadding": 270
+				},
+				"1400": {
+					"items": 3,
+					"margin": 30,
+                    "stagePadding": 120
+				},
+				"1600": {
+					"items": 3,
+					"margin": 30,
+                    "stagePadding": 210
+				},
+				"1800": {
+					"items": 3,
+					"margin": 30,
+                    "stagePadding": 375
+				}
+			}
+		}'>
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-1.jpg' %}" alt="WordPress for Everyone: Unlock Your Creativity Online">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        25 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="wordpress-development.html">WordPress for Everyone: Unlock Your Creativity Online</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        25 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        350 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>69.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            25 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="wordpress-development.html">WordPress for Everyone: Unlock Your Creativity Online</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Diam phasellus vestibulum lorem sed risus</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="wordpress-development.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            25 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            350 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-2.jpg' %}" alt="The Data Science Revolution: Upgrading Your Skills">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        20 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="data-science.html">The Data Science Revolution: Upgrading Your Skills</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        20 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        300 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>50.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            20 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">The Data Science Revolution: Upgrading Your Skills</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">We need to dialog around your choice of work attire we need more paper back of the net quick win yet today</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            20 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            300 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-3.jpg' %}" alt="From Zero to Website: A Web Development Adventure">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        30 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="web-development.html">From Zero to Website: A Web Development Adventure</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        32 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        250 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>40.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            30 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="web-development.html">From Zero to Website: A Web Development Adventure</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">Yet today shall be a cloudy day, thanks to blue sky thinking, we can now deploy our new ui to the cloud</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="web-development.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            32 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            250 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-4.jpg' %}" alt="advanced Mastering UI/UX Design Fundamentals course">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        15 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="uiux-design.html">advanced Mastering UI/UX Design Fundamentals course</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        28 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        150 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>70.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            15 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="uiux-design.html">advanced Mastering UI/UX Design Fundamentals course</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">The closest elephant is the most dangerous. We should have a meeting to discuss the details of the next</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="uiux-design.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            28 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            150 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-5.jpg' %}" alt="advanced Mastering graphics Design Fundamentals course">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        35 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="graphics-design.html">advanced Mastering graphics Design Fundamentals course</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        15 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        250 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>85.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            35 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="graphics-design.html">advanced Mastering graphics Design Fundamentals course</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">The flagpole bazooka that run it past the boss jump right in and banzai attack will they won't they its all greek</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="graphics-design.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            15 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            250 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-6.jpg' %}" alt="Digital Marketing course Guideline: Level Up Your Skills">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        28 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="digital-marketing.html">Digital Marketing course Guideline: Level Up Your Skills</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        26 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        100 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>20.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            28 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="digital-marketing.html">Digital Marketing course Guideline: Level Up Your Skills</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">Unless they bother until the end of time maybe vis a vis too many cooks over the line encourage & support business</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="digital-marketing.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            26 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            100 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-7.jpg' %}" alt="The SEO Become an Expert in Search Engine Optimization">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        10 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="search-engine-optimization.html">The SEO Become an Expert in Search Engine Optimization</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        19 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        450 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>35.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            10 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="search-engine-optimization.html">The SEO Become an Expert in Search Engine Optimization</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">T-shaped individual start procrastinating 2 hours get to do work while procrastinating open book</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="search-engine-optimization.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            19 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            450 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-8.jpg' %}" alt="Apps Development Mastering course From Zero to Hero">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        40 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="apps-development.html">Apps Development Mastering course From Zero to Hero</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        37 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        400 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>55.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            40 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="apps-development.html">Apps Development Mastering course From Zero to Hero</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">Baseline the procedure and samepage your department i am dead inside, and move the needle, so exposing new</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="apps-development.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            37 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            400 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="course-card__image">
+                                <img src="{% static 'assets/images/courses/course-1-9.jpg' %}" alt="Web Design Wizardry Mastering Responsive Website">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span><!-- /.eduhive-ratings__icon -->
+                                    </div><!-- /.product-ratings -->
+                                    <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                </div><!-- /.course-card__ratings -->
+                            </div><!-- /.course-card__image -->
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span><!-- /.course-card__duration__icon -->
+                                        26 weeks
+                                    </div><!-- /.course-card__duration -->
+                                </div><!-- /.course-card__content__top -->
+                                <h3 class="course-card__title"><a href="web-design.html">Web Design Wizardry Mastering Responsive Website</a></h3><!-- /.course-card__title -->
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        18 lessons
+                                    </div><!-- /.course-card__lessons -->
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span><!-- /.course-card__lessons__icon -->
+                                        80 Students
+                                    </div><!-- /.course-card__students -->
+                                </div><!-- /.course-card__info -->
+                                <h4 class="course-card__price">$<span>28.00</span></h4><!-- /.course-card__price -->
+                            </div><!-- /.course-card__content -->
+                            <div class="course-card__hover" style="background-image: url(static/assets/images/shapes/course-card-bg-1-1.png);">
+                                <div class="course-card__hover__content">
+                                    <div class="course-card__content__top course-card__content__top--hover">
+                                        <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                                        <div class="course-card__duration">
+                                            <span class="course-card__duration__icon">
+                                                <i class="icon-clock"></i>
+                                            </span><!-- /.course-card__duration__icon -->
+                                            26 weeks
+                                        </div><!-- /.course-card__duration -->
+                                    </div><!-- /.course-card__content__top -->
+                                    <h3 class="course-card__title course-card__title--hover"><a href="web-design.html">Web Design Wizardry Mastering Responsive Website</a></h3><!-- /.course-card__title -->
+                                    <p class="course-card__text">Race without a finish line we don't want to boil the ocean. What do you feel you would bring to the table</p><!-- /.course-card__text -->
+                                    <div class="course-card__ratings course-card__ratings--hover">
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                        <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                                    </div><!-- /.course-card__ratings -->
+                                    <a href="web-design.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                                        <span>enroll now</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.course-card__btn eduhive-btn -->
+                                    <div class="course-card__info course-card__info--hover">
+                                        <div class="course-card__lessons">
+                                            <span class="course-card__lessons__icon">
+                                                <i class="icon-open-book"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            18 lessons
+                                        </div><!-- /.course-card__lessons -->
+                                        <div class="course-card__students">
+                                            <span class="course-card__students__icon">
+                                                <i class="icon-multiple-users-silhouette"></i>
+                                            </span><!-- /.course-card__lessons__icon -->
+                                            80 Students
+                                        </div><!-- /.course-card__students -->
+                                    </div><!-- /.course-card__info -->
+                                </div><!-- /.course-card__hover__content -->
+                            </div><!-- /.course-card__hover -->
+                        </div><!-- /.course-card -->
+                    </div><!-- /.item -->
+                </div><!-- /.courses-two__carousel -->
+            </div><!-- /.courses-two__container container -->
+            <div class="container">
+                <div class="courses-two__custome-navs"></div><!-- /.courses-two__custome-navs -->
+            </div><!-- /.container -->
+        </section><!-- /.courses-two section-space2 -->
+
+        
+        {% endblock %}

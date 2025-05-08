@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <ul class="eduhive-breadcrumb list-unstyled">
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                        <li><span>our courses</span></li>
+                        <li><span>The Complete Cyber Security Course</span></li>
+                    </ul><!-- /.eduhive-breadcrumb list-unstyled -->
+                    <h2 class="page-header__title">{{course.title}}</h2>
+                </div><!-- /.page-header__content -->
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/page-header-shape-1.png' %}" alt="shape" class="page-header__shape-one">
+            <img src="{% static 'assets/images/shapes/page-header-shape-2.png' %}" alt="shape" class="page-header__shape-two">
+            <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
+            <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
+        </section><!-- /.page-header -->
+
+        <section class="course-details section-space">
+            <div class="container">
+                <div class="row gutter-y-40">
+                    <div class="col-xl-8 col-lg-7">
+                        
+                        <div class="course-details__inner">
+                            <h3 class="course-details__title">{{ course.course_name }}</h3>
+                        
+                            <div class="course-details__info-wrapper">
+                                <div class="course-details__class">
+                                    <span class="course-details__class__icon">
+                                        <i class="icon-video"></i>
+                                    </span>
+                                    <p class="course-details__class__text">Duration: {{ course.duration_months }} months</p>
+                                </div>
+                        
+                                <div class="course-details__review">
+                                    <span class="course-details__review__icon">
+                                        <i class="icon-star"></i>
+                                    </span>
+                                    <p class="course-details__review__text">
+                                        <span>{{ course.rating }}</span>
+                                        <span>({{ course.student_count }} Students)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <div class="course-details__image">
+                                {% if course.course_video %}
+                                <video width="100%" height="auto" controls>
+                                    <source src="{{ course.course_video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                {% endif %}
+                                <span class="course-details__category">{{ course.level|default:"General" }}</span>
+                            </div>
+                        
+                            <div class="course-details__main-tab-box tabs-box">
+                                <div class="tabs-content">
+                                    <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="overview" style="display: block;">
+                                        <div class="course-details__description wow fadeInUp" data-wow-duration="1500ms">
+                                            <h3 class="course-details__title course-details__title--description">Course Description</h3>
+                                            <div class="course-details__description__inner">
+                                                <p class="course-details__description__text">{{ course.coaching_details|safe|linebreaks }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div><!-- /.col-xl-8 col-lg-7 -->
+                    <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-details__info">
+                            <h3 class="course-details__info__title">Course includes:</h3><!-- /.course-details__info__title -->
+                            <ul class="course-details__info__list list-unstyled">
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-ranking"></i></span>
+                                            Level:
+                                        </div>
+                                        <span>{{ course.level|default:"N/A" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-clock-1"></i></span>
+                                            Duration:
+                                        </div>
+                                        <span>{{ course.duration|default:"N/A" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-graduation"></i></span>
+                                            Lessons:
+                                        </div>
+                                        <span>{{ course.lessons|default:"N/A" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-multiple-users"></i></span>
+                                            Students:
+                                        </div>
+                                        <span>{{ course.student_count|default:"0" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-medal"></i></span>
+                                            Certifications:
+                                        </div>
+                                        <span>{{ course.certification|default:"N/A" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-globe"></i></span>
+                                            Language:
+                                        </div>
+                                        <span>{{ course.language|default:"N/A" }}</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-files"></i></span>
+                                            Course Brochure
+                                        </div>
+                                        {% if course.course_brochure %}
+                                        <a href="{{ course.course_brochure.url }}" download>
+                                            <span>Download Now</span>
+                                        </a>
+                                        {% else %}
+                                        <span>Not Available</span>
+                                        {% endif %}
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="course-details__info__price">
+                                This course Fee ₹{{ course.course_fee|default:"N/A" }}
+                            </div>
+                            <!-- /.course-details__info__price -->
+                            <a href="{% url 'contact' %}" class="course-details__info__btn eduhive-btn">
+                                <span class="eduhive-btn__text">Join This course</span>
+                                <span class="eduhive-btn__icon">
+                                    <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
+                                </span>
+                            </a><!-- /.eduhive-btn -->
+                            
+                        </div><!-- /.course-details__info -->
+                    </div><!-- /.col-xl-4 col-lg-5 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.course-details section-space -->
+        <section class="faq-page section-space">
+            <div class="container">
+                <div class="row gutter-y-50">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="faq-page__image">
+                            <img src="{% static 'assets/images/faq.jpg' %}" alt="faq">
+                        </div><!-- /.faq-page__image -->
+                    </div><!-- /.col-lg-6 -->
+                    
+                    <div class="col-lg-6">
+                        <div class="accordion wow fadeInRight" data-wow-delay=".25s" id="accordionExample">
+                            {% for faq in course.faqs.all %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                    <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}"
+                                        aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                                        aria-controls="collapse{{ forloop.counter }}">
+                                        <span><i class="far fa-question"></i></span> {{ faq.question }}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ forloop.counter }}"
+                                    class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+                                    aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        {{ faq.answer|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
+                            <p>No FAQs available for this course.</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                </div><!-- /.row gutter-y-50 -->
+            </div><!-- /.container -->
+        </section><!-- /.faq-page section-space -->
+
+        
+
+        <section class="courses-four section-space2">
+            <div class="container">
+                <div class="courses-four__top">
+                    <div class="row gutter-y-50 align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <h6 class="sec-title__tagline">our courses</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                        </div><!-- /.col-xl-9 col-lg-8 -->
+                        <div class="col-xl-3 col-lg-4">
+                            <div class="courses-four__custome-navs"></div><!-- /.courses-four__custome-navs -->
+                        </div><!-- /.col-xl-3 col-lg-4 -->
+                    </div><!-- /.row gutter-y-40 -->
+                </div><!-- /.courses-four__top -->
+                <div class="courses-four__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+                    "items": 1,
+                    "margin": 10,
+                    "loop": true,
+                    "smartSpeed": 700,
+                    "nav": false,
+                    "dots": false,
+                    "navContainer": ".courses-four__custome-navs",
+                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                    "autoplay": true,
+                    "responsive": {
+                        "0": {
+                            "items": 1,
+                            "nav": true,
+                            "margin": 10
+                        },
+                        "768": {
+                            "items": 2,
+                            "margin": 30
+                        },
+                        "992": {
+                            "items": 3,
+                            "margin": 30
+                        }
+                    }
+                }'>
+                    {% for course in all_courses %}
+                    <div class="item">
+                        <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="course-card__image">
+                                <img src="{{ course.image.url }}" alt="{{ course.course_name }}">
+                                <div class="course-card__ratings">
+                                    <div class="eduhive-ratings">
+                                        {% for i in "12345"|slice:":course.rating" %}
+                                        <span class="eduhive-ratings__icon">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        {% endfor %}
+                                    </div>
+                                    <p class="course-card__ratings__text">{{ course.rating }} Ratings</p>
+                                </div>
+                            </div>
+                            <div class="course-card__content">
+                                <div class="course-card__content__top">
+                                    <div class="course-card__category">{{ course.level|default:"Beginner" }}</div>
+                                    <div class="course-card__duration">
+                                        <span class="course-card__duration__icon">
+                                            <i class="icon-clock"></i>
+                                        </span>
+                                        {{ course.duration_months|default:"0" }} months
+                                    </div>
+                                </div>
+                                <h3 class="course-card__title">
+                                    <a href="{% url 'course_details' course.id %}">{{ course.course_name }}</a>
+                                </h3>
+                                <div class="course-card__info">
+                                    <div class="course-card__lessons">
+                                        <span class="course-card__lessons__icon">
+                                            <i class="icon-open-book"></i>
+                                        </span>
+                                        {{ course.lessons }} lessons
+                                    </div>
+                                    <div class="course-card__students">
+                                        <span class="course-card__students__icon">
+                                            <i class="icon-multiple-users-silhouette"></i>
+                                        </span>
+                                        {{ course.student_count }} Students
+                                    </div>
+                                </div>
+                                <h4 class="course-card__price">₹<span>{{ course.course_fee }}</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div><!-- /.container -->
+        </section><!-- /.courses-four section-space2 -->
+        
+
+        {% endblock %}

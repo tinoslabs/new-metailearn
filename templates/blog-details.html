@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <ul class="eduhive-breadcrumb list-unstyled">
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="{% url 'index' %}">Home</a></li>
+                        <li><span>Our Blog</span></li>
+                        <li><span>{{ blog.blog_heading }}</span></li>
+                    </ul><!-- /.eduhive-breadcrumb list-unstyled -->
+                    <h2 class="page-header__title">{{ blog.blog_heading }}</h2>
+                </div><!-- /.page-header__content -->
+            </div><!-- /.container -->
+            <img src="{% static 'assets/images/shapes/page-header-shape-1.png' %}" alt="shape" class="page-header__shape-one">
+            <img src="{% static 'assets/images/shapes/page-header-shape-2.png' %}" alt="shape" class="page-header__shape-two">
+            <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
+            <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
+        </section><!-- /.page-header -->
+
+        <section class="blog-details-page section-space">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="blog-details">
+                            <div class="blog-card blog-card--three wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <div class="blog-card__image">
+                                    <img src="{{ blog.main_image.url }}" alt="{{ blog.blog_heading }}">
+                                    {% if blog.date %}
+                                    <div class="blog-card__date">
+                                        <span class="blog-card__date__day">{{ blog.date.day }}</span>
+                                        <span class="blog-card__date__month">{{ blog.date|date:"F" }}</span>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="blog-card__content">
+                                    <ul class="list-unstyled blog-card__meta">
+                                        <li>
+                                            <a href="#">
+                                                <span class="blog-card__meta__icon">
+                                                    <i class="far fa-user"></i>
+                                                </span>
+                                                by Admin
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="blog-card__meta__icon">
+                                                    <i class="icon-comments"></i>
+                                                </span>
+                                                2 Comments
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="blog-card__title">{{ blog.blog_heading }}</h3>
+                                    <div class="blog-card__content__inner">
+                                        <p class="blog-card__text">{{ blog.blog_details|safe|linebreaks }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div><!-- /.blog-details -->
+
+                        
+
+                        <div class="comments-form">
+                            <h3 class="comments-form__title">Leave a Comment</h3><!-- /.comments-form__title -->
+                            <form action="{% static 'assets/inc/sendemail.php' %}" class="comments-form__form contact-form-validated form-one">
+                                <div class="form-one__group">
+                                    <div class="form-one__control wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div><!-- /.form-one__control -->
+                                    <div class="form-one__control wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="50ms">
+                                        <input type="email" name="email" placeholder="Your Email">
+                                    </div><!-- /.form-one__control -->
+                                    <div class="form-one__control form-one__control--full wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                                        <textarea name="message" placeholder="Write Message . ."></textarea>
+                                    </div><!-- /.form-one__control -->
+                                    <div class="form-one__control form-one__control--full wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="150ms">
+                                        <button type="submit" class="comments-form__btn eduhive-btn eduhive-btn--normal"><span>Post Comment</span></button><!-- /.eduhive-btn -->
+                                    </div><!-- /.form-one__control -->
+                                </div><!-- /.form-one__group -->
+                            </form><!-- /.comments-form__form -->
+                            <div class="result"></div><!-- /.result -->
+                        </div><!-- /.comments-form -->
+                    </div><!-- /.col-lg-8 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.blog-details-page section-space -->
+
+        {% endblock %}
