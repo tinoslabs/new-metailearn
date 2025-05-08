@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-2y^)_7%x)q0ca6n_5beopx#u^^^y)k!m##v6tij2#e(i#uehl(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['new-metailearn.onrender.com', '127.0.0.1', 'localhost']
+
+
 
 
 # Application definition
